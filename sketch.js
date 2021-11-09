@@ -33,20 +33,22 @@ function setup() {
 	
 	Engine.run(engine);
 	
-  
 }
 
+function keyPressed() {
+	if (keyCode === UP_ARROW) {
+	
+		 Matter.Body.applyForce(bob1.body,bob1.body.position,
+								{x:-50,y:-45});
+	
+		  }
+	}
 
+	
 function draw() {
 	rectMode(CENTER);
 	background(230);
 	roofObject.display();
-
-	bob1.display();
-	bob2.display();
-	bob3.display();
-	bob4.display();
-	bob5.display();
 
 	rope1.display();
 	rope2.display();
@@ -54,52 +56,12 @@ function draw() {
 	rope4.display();
 	rope5.display();
 
-	if(keyWentDown("1")){
-		Matter.Body.applyForce(bob1.body,bob1.body.position,{x:-50,y:-45});
-	}
+	bob1.display();
+	bob2.display();
 
-	if(keyWentDown("2")){
-		Matter.Body.applyForce(bob1.body,bob1.body.position,{x:-50,y:-45});
-		Matter.Body.applyForce(bob2.body,bob2.body.position,{x:-50,y:-45});
-	}
-
-	if(keyWentDown("3")){
-		Matter.Body.applyForce(bob1.body,bob1.body.position,{x:-50,y:-45});
-		Matter.Body.applyForce(bob2.body,bob2.body.position,{x:-50,y:-45});
-		Matter.Body.applyForce(bob3.body,bob3.body.position,{x:-50,y:-45});
-	}
-
-	if(keyWentDown("4")){
-		Matter.Body.applyForce(bob1.body,bob1.body.position,{x:-50,y:-45});
-		Matter.Body.applyForce(bob2.body,bob2.body.position,{x:-50, y:-45});
-
-		Matter.Body.applyForce(bob4.body,bob4.body.position,{x:50, y:45});
-		Matter.Body.applyForce(bob5.body,bob5.body.position,{x:50, y:45});
-	}
-
-	if(keyWentDown("5")){
-		Matter.Body.applyForce(bob1.body,bob1.body.position,{x:-50,y:-45});
-		Matter.Body.applyForce(bob2.body,bob2.body.position,{x:-50,y:-45});
-		Matter.Body.applyForce(bob3.body,bob3.body.position,{x:-50,y:-45});
-	
-		Matter.Body.applyForce(bob4.body,bob4.body.position,{x:50, y:45});
-		Matter.Body.applyForce(bob5.body,bob5.body.position,{x:50, y:45});
-	}
-
-	if(keyWentDown("6")){
-		Matter.Body.applyForce(bob1.body,bob1.body.position,{x:-50,y:-45});
-		Matter.Body.applyForce(bob2.body,bob2.body.position,{x:-50,y:-45});
-		Matter.Body.applyForce(bob3.body,bob3.body.position,{x:-50,y:-45});
-	
-		Matter.Body.applyForce(bob5.body,bob5.body.position,{x:50, y:45});
-	}
-
-	if(keyWentDown("7")){
-		Matter.Body.applyForce(bob1.body,bob1.body.position,{x:-50,y:-45});
-		Matter.Body.applyForce(bob2.body,bob2.body.position,{x:-50,y:-45});
-
-		Matter.Body.applyForce(bob5.body,bob5.body.position,{x:50, y:45});
-	}
+	bob3.display();
+	bob4.display();
+	bob5.display();
 
 }
 
